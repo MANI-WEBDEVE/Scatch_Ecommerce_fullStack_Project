@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const productSchema = mongoose.Schema({
+const productSchema = new mongoose.Schema({
   image: {
     type: String,
     required: true,
@@ -19,6 +19,7 @@ const productSchema = mongoose.Schema({
   },
   bgColor: {
     type: String,
+    required: true
   },
   panelColor: {
     type: String,
