@@ -1,11 +1,14 @@
 import mongoose from "mongoose";
+import dbgr from 'debug';
+
+const log = dbgr('dev:mongoose')
 
 const dataBaseConnection = async () => {
   try {
     const connect = await mongoose.connect(
       `${process.env.DB_URL}${process.env.DB_URL_NAME}`
     );
-    console.log(
+     log (
       "Database Connected:",
       connect.connection.host,
       connect.connection.name

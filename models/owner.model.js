@@ -6,18 +6,18 @@ const OwnerSchema = new Schema({
     type: String,
     minlength: 4,
     trim: true,
-    required: true,
+    // required: true,
   },
   email: {
     type: String,
-    required: true,
+    // required: true,
     trim: true,
     unique: true
   },
 
   password: {
     type: String,
-    required: true,
+    // required: true,
     minlength: 6,
     trim: true,
     unique:true
